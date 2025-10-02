@@ -1,6 +1,5 @@
 package UI;
 
-
 import Model.User;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -20,13 +19,12 @@ import javax.swing.SwingConstants;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author deshm
  */
 public class NewJFrame extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(NewJFrame.class.getName());
 
     /**
@@ -45,7 +43,7 @@ public class NewJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        genderButtonGroup = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         Photo = new javax.swing.JLabel();
         FirstNameText = new javax.swing.JTextField();
@@ -54,36 +52,35 @@ public class NewJFrame extends javax.swing.JFrame {
         FemaleRadio = new javax.swing.JRadioButton();
         OtherRadio = new javax.swing.JRadioButton();
         EmailText = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        firstNameLabel = new javax.swing.JLabel();
+        lastNameLabel = new javax.swing.JLabel();
+        genderLabel = new javax.swing.JLabel();
         SubmitButton = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        ageLabel = new javax.swing.JLabel();
+        phoneNumLabel = new javax.swing.JLabel();
+        emailLabel = new javax.swing.JLabel();
         UploadButton = new javax.swing.JButton();
-        jSpinner1 = new javax.swing.JSpinner();
+        ageSpinner = new javax.swing.JSpinner();
         PhoneFormattedText = new javax.swing.JFormattedTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        hobbiesLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         HobbiesTextArea = new javax.swing.JTextArea();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel9 = new javax.swing.JLabel();
+        continentComboBox = new javax.swing.JComboBox<>();
+        continentLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
 
         Photo.setText("Photo");
 
-        buttonGroup1.add(MaleRadio);
+        genderButtonGroup.add(MaleRadio);
         MaleRadio.setText("Male");
 
-        buttonGroup1.add(FemaleRadio);
+        genderButtonGroup.add(FemaleRadio);
         FemaleRadio.setText("Female");
 
-        buttonGroup1.add(OtherRadio);
+        genderButtonGroup.add(OtherRadio);
         OtherRadio.setText("Other");
 
         EmailText.addActionListener(new java.awt.event.ActionListener() {
@@ -92,11 +89,11 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("FirstName");
+        firstNameLabel.setText("FirstName");
 
-        jLabel2.setText("LastName");
+        lastNameLabel.setText("LastName");
 
-        jLabel3.setText("Gender");
+        genderLabel.setText("Gender");
 
         SubmitButton.setText("Submit");
         SubmitButton.addActionListener(new java.awt.event.ActionListener() {
@@ -105,11 +102,11 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("Age");
+        ageLabel.setText("Age");
 
-        jLabel5.setText("Phone no");
+        phoneNumLabel.setText("Phone no");
 
-        jLabel6.setText("Email");
+        emailLabel.setText("Email");
 
         UploadButton.setText("Upload");
         UploadButton.addActionListener(new java.awt.event.ActionListener() {
@@ -118,26 +115,38 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setText("Hobbies");
+        ageSpinner.setModel(new javax.swing.SpinnerNumberModel(0, null, 120, 1));
+
+        try {
+            PhoneFormattedText.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###-###-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        PhoneFormattedText.setToolTipText("123-456-7890");
+
+        hobbiesLabel.setText("Hobbies");
 
         HobbiesTextArea.setColumns(20);
         HobbiesTextArea.setRows(5);
         jScrollPane1.setViewportView(HobbiesTextArea);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        continentComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Asia", "Africa", "North America", "South America", "Antarctica", "Europe", "Australia " }));
+        continentComboBox.setSelectedIndex(-1);
 
-        jLabel9.setText("Continent");
+        continentLabel.setText("Continent");
+        continentLabel.setToolTipText("");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 261, Short.MAX_VALUE)
+                .addComponent(SubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(248, 248, 248))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel8))
+                    .addComponent(hobbiesLabel)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addContainerGap()
@@ -146,36 +155,30 @@ public class NewJFrame extends javax.swing.JFrame {
                             .addComponent(Photo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(87, 87, 87)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)))))
+                                .addComponent(firstNameLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lastNameLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(genderLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(ageLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(phoneNumLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(emailLabel, javax.swing.GroupLayout.Alignment.TRAILING))))
+                    .addComponent(continentLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(EmailText, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(FemaleRadio)
-                            .addComponent(FirstNameText, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-                            .addComponent(LastNameText)
-                            .addComponent(MaleRadio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(OtherRadio))
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PhoneFormattedText, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(157, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(SubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addGap(18, 18, 18)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(248, 248, 248))
+                    .addComponent(continentComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(EmailText, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(FemaleRadio)
+                                .addComponent(FirstNameText, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                                .addComponent(LastNameText)
+                                .addComponent(MaleRadio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(OtherRadio))
+                        .addComponent(PhoneFormattedText, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ageSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,12 +191,12 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addComponent(UploadButton))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
+                            .addComponent(firstNameLabel)
                             .addComponent(FirstNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(LastNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
+                            .addComponent(lastNameLabel))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
@@ -204,30 +207,30 @@ public class NewJFrame extends javax.swing.JFrame {
                                 .addComponent(FemaleRadio))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(31, 31, 31)
-                                .addComponent(jLabel3)))
+                                .addComponent(genderLabel)))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(ageLabel)
+                            .addComponent(ageSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                    .addComponent(phoneNumLabel)
                     .addComponent(PhoneFormattedText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
+                    .addComponent(emailLabel)
                     .addComponent(EmailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(hobbiesLabel)
+                        .addGap(0, 62, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                    .addComponent(continentLabel)
+                    .addComponent(continentComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
                 .addComponent(SubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -251,103 +254,192 @@ public class NewJFrame extends javax.swing.JFrame {
     private void EmailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_EmailTextActionPerformed
-private File photoFile = null;
+    private File photoFile = null;
     private void UploadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UploadButtonActionPerformed
         // TODO add your handling code here:
-         JFileChooser chooser = new JFileChooser();
-    chooser.setDialogTitle("Select a Photo");
-    chooser.setAcceptAllFileFilterUsed(false);
-    chooser.addChoosableFileFilter(new javax.swing.filechooser.FileNameExtensionFilter(
-            "Image files", "jpg", "jpeg", "png", "gif"));
+        JFileChooser chooser = new JFileChooser();
+        chooser.setDialogTitle("Select a Photo");
+        chooser.setAcceptAllFileFilterUsed(false);
+        chooser.addChoosableFileFilter(new javax.swing.filechooser.FileNameExtensionFilter(
+                "Image files", "jpg", "jpeg", "png", "gif"));
 
-    int result = chooser.showOpenDialog(this);
-    if (result == JFileChooser.APPROVE_OPTION) {
-        photoFile = chooser.getSelectedFile();
+        int result = chooser.showOpenDialog(this);
+        if (result == JFileChooser.APPROVE_OPTION) {
+            photoFile = chooser.getSelectedFile();
 
-        // Load and scale the image to fit photoLabel
-        ImageIcon icon = new ImageIcon(photoFile.getAbsolutePath());
-        Image img = icon.getImage().getScaledInstance(
-                 Photo.getWidth(),  Photo.getHeight(),
-                Image.SCALE_SMOOTH);
+            // Load and scale the image to fit photoLabel
+            ImageIcon icon = new ImageIcon(photoFile.getAbsolutePath());
+            Image img = icon.getImage().getScaledInstance(
+                    Photo.getWidth(), Photo.getHeight(),
+                    Image.SCALE_SMOOTH);
 
-        // Show photo in JLabel
-        Photo.setIcon(new ImageIcon(img));
-         Photo.setText(""); // clear default "No Photo"
-    }
+            // Show photo in JLabel
+            Photo.setIcon(new ImageIcon(img));
+            Photo.setText(""); // clear default "No Photo"
+       photoFile = chooser.getSelectedFile(); // MODIFIED
+
+// Show photo in JLabel
+Photo.setIcon(new ImageIcon(img));
+Photo.setText(""); 
+        }
     }//GEN-LAST:event_UploadButtonActionPerformed
 
     private void SubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitButtonActionPerformed
- // Get values from form
-    String first = FirstNameText.getText().trim();
-    String last = LastNameText.getText().trim();
-    int age = (Integer) jSpinner1.getValue(); // Spinner already returns Integer
-    String phone = PhoneFormattedText.getText().trim();
-    String email = EmailText.getText().trim();
-    String gender = "";
 
-    // Read gender from radio buttons
-    if (MaleRadio.isSelected()) gender = "Male";
-    else if (FemaleRadio.isSelected()) gender = "Female";
-    else if (OtherRadio.isSelected()) gender = "Other";
+        try {
+// Get values from form
+            String first_name;
+            String last_name;
+            String gender = "";
+            int age;
+            String email;
+            String phone_number;
+            String continent = "";
+            String hobbies;
+            File PhotoFile;
 
-    // Validation
-    if (first.isEmpty()) { 
-        JOptionPane.showMessageDialog(this, "First Name is required"); 
-        return; 
-    }
-    if (last.isEmpty()) { 
-        JOptionPane.showMessageDialog(this, "Last Name is required"); 
-        return; 
-    }
-    if (gender.isEmpty()) { 
-        JOptionPane.showMessageDialog(this, "Please select Gender"); 
-        return; 
-    }
-    if (age <= 0) {
-        JOptionPane.showMessageDialog(this, "Age must be greater than 0");
-        return;
-    }
-    if (!phone.matches("\\d{10}")) {
-        JOptionPane.showMessageDialog(this, "Phone must be 10 digits");
-        return;
-    }
-    if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
-        JOptionPane.showMessageDialog(this, "Invalid Email format");
-        return;
-    }
+            // Read gender from radio buttons
+            if (MaleRadio.isSelected()) {
+                gender = "Male";
+            } else if (FemaleRadio.isSelected()) {
+                gender = "Female";
+            } else if (OtherRadio.isSelected()) {
+                gender = "Other";
+            }
 
-    // Create profile panel
-    JPanel panel = new JPanel(new BorderLayout(10, 10));
+            //extract and sotre user data
+            first_name = this.FirstNameText.getText();
+            last_name = this.LastNameText.getText();
+            age = (int) this.ageSpinner.getModel().getValue();
+            phone_number = this.PhoneFormattedText.getText();
+            email = this.EmailText.getText();
+            hobbies = (String) this.HobbiesTextArea.getText();
 
-    // Left: Photo
-    JLabel picLabel = new JLabel();
-    if (photoFile != null) {
-        ImageIcon icon = new ImageIcon(photoFile.getAbsolutePath());
-        Image img = icon.getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        picLabel.setIcon(new ImageIcon(img));
-    } else {
-        picLabel.setText("No Photo");
-        picLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        picLabel.setPreferredSize(new Dimension(120, 120));
-        picLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-    }
+            if (continentComboBox.getSelectedIndex() != -1) {
+                continent = (String) continentComboBox.getSelectedItem();
+            }
 
-    // Right: Details
-    JTextArea details = new JTextArea(
-        "Name: " + first + " " + last + "\n" +
-        "Gender: " + gender + "\n" +
-        "Age: " + age + "\n" +
-        "Phone: " + phone + "\n" +
-        "Email: " + email
-    );
-    details.setEditable(false);
+            // Validation
+            if (Photo.getIcon() == null) {   // NEW
+    JOptionPane.showMessageDialog(rootPane, "Please upload an image!", "Oops!", JOptionPane.ERROR_MESSAGE);
+    return;
+}
+            // check if first_name is empty
+            if (first_name.isBlank()) {
+                JOptionPane.showMessageDialog(rootPane, "First name is required!", "Ooops!", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
 
-    panel.add(picLabel, BorderLayout.WEST);
-    panel.add(details, BorderLayout.CENTER);
+            //check first name only contains letter and space
+            if (!first_name.matches("[a-zA-Z\\s]+")) {
+                JOptionPane.showMessageDialog(rootPane, "First name can only contain letters and spaces!", "Ooops!", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
 
-    // Show profile dialog
-    JOptionPane.showMessageDialog(this, panel, "User Profile", JOptionPane.PLAIN_MESSAGE);
+            if (last_name.isBlank()) {
+                JOptionPane.showMessageDialog(rootPane, "Last Name is required!", "Ooops!", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
 
+            //check last name only contains letter and space
+            if (!last_name.matches("[a-zA-Z\\s]+")) {
+                JOptionPane.showMessageDialog(rootPane, "Last name can only contain letters and spaces!", "Ooops!", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            if (gender.isBlank()) {
+                JOptionPane.showMessageDialog(rootPane, "Please select a Gender!", "Ooops!", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            if (age <= 0) {
+                JOptionPane.showMessageDialog(rootPane, "Age must be greater than 0!", "Ooops!", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            String cleanPhone = phone_number.replaceAll("[\\s\\-\\(\\)]", "");
+            if (phone_number.isBlank() || !cleanPhone.matches("\\d{10,15}")) {
+                JOptionPane.showMessageDialog(rootPane, "Invalid phone number provided!", "Ooops!", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            if (phone_number.isBlank()) {
+                if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
+                    JOptionPane.showMessageDialog(rootPane, "Invalid Email Format!", "Ooops!", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+            }
+
+            // Validate email
+            if (email.isBlank() || !email.matches("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$")) {
+                JOptionPane.showMessageDialog(rootPane, "Invalid email address provided!", "Ooops!", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            // Validate Hobbies
+            if (hobbies == null || hobbies.isBlank()) {
+                JOptionPane.showMessageDialog(rootPane, "Please write down your hobbies", "Oops!", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            // validate continent 
+            if (continent == null || continent.isBlank()) {
+                JOptionPane.showMessageDialog(rootPane, "Please select a continent", "Oops!", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            User user = new User(first_name, last_name, gender, age, email, phone_number, continent, hobbies,  photoFile.getAbsolutePath());
+               JPanel panel = new JPanel(new BorderLayout(10, 10));
+                JLabel picLabel = new JLabel();
+// ✅ Link directly to the JLabel's icon
+                 picLabel.setIcon(Photo.getIcon());
+                 picLabel.setPreferredSize(new Dimension(120, 120));
+                 picLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+              JTextArea details = new JTextArea(user.toString());
+            details.setEditable(false);
+
+            panel.add(picLabel, BorderLayout.WEST);
+            panel.add(details, BorderLayout.CENTER);
+
+            
+           JOptionPane.showMessageDialog(rootPane, panel, "Success!", JOptionPane.INFORMATION_MESSAGE);
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, "Something went wrong! Please try again.", "Ooops!", JOptionPane.ERROR_MESSAGE);
+            System.out.println("Error: " + e.getMessage());
+        }
+
+//    // Create profile panel
+//    JPanel panel = new JPanel(new BorderLayout(10, 10));
+//
+//    // Left: Photo
+//    JLabel picLabel = new JLabel();
+//    if (photoFile != null) {
+//        ImageIcon icon = new ImageIcon(photoFile.getAbsolutePath());
+//        Image img = icon.getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH);
+//        picLabel.setIcon(new ImageIcon(img));
+//    } else {
+//        picLabel.setText("No Photo");
+//        picLabel.setHorizontalAlignment(SwingConstants.CENTER);
+//        picLabel.setPreferredSize(new Dimension(120, 120));
+//        picLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+//    }
+//
+//    // Right: Details
+//    JTextArea details = new JTextArea(
+//        "Name: " + first + " " + last + "\n" +
+//        "Gender: " + gender + "\n" +
+//        "Age: " + age + "\n" +
+//        "Phone: " + phone + "\n" +
+//        "Email: " + email
+//    );
+//    details.setEditable(false);
+//
+//    panel.add(picLabel, BorderLayout.WEST);
+//    panel.add(details, BorderLayout.CENTER);
+//
+//    // Show profile dialog
+//    JOptionPane.showMessageDialog(this, panel, "User Profile", JOptionPane.PLAIN_MESSAGE);
 
     }//GEN-LAST:event_SubmitButtonActionPerformed
 
@@ -355,11 +447,6 @@ private File photoFile = null;
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -367,14 +454,10 @@ private File photoFile = null;
                     break;
                 }
             }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (Exception ex) {
             logger.log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-      
-       
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new NewJFrame().setVisible(true));
     }
 
@@ -390,19 +473,18 @@ private File photoFile = null;
     private javax.swing.JLabel Photo;
     private javax.swing.JButton SubmitButton;
     private javax.swing.JButton UploadButton;
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel ageLabel;
+    private javax.swing.JSpinner ageSpinner;
+    private javax.swing.JComboBox<String> continentComboBox;
+    private javax.swing.JLabel continentLabel;
+    private javax.swing.JLabel emailLabel;
+    private javax.swing.JLabel firstNameLabel;
+    private javax.swing.ButtonGroup genderButtonGroup;
+    private javax.swing.JLabel genderLabel;
+    private javax.swing.JLabel hobbiesLabel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JLabel lastNameLabel;
+    private javax.swing.JLabel phoneNumLabel;
     // End of variables declaration//GEN-END:variables
 }
